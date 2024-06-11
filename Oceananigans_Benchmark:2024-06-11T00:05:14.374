@@ -1,0 +1,22 @@
+Oceananigans Benchmark:2024-06-11T00:05:14.374
+Oceananigans version:Oceananigans v0.91.0 (DEVELOPMENT BRANCH)
+Oceananigans GPU version:Julia Version 1.10.3
+Commit 0b4590a5507 (2024-04-30 10:59 UTC)
+Build Info:
+  Official https://julialang.org/ release
+Platform Info:
+  OS: Linux (x86_64-linux-gnu)
+  CPU: 24 × AMD Ryzen 9 5900X 12-Core Processor
+  WORD_SIZE: 64
+  LIBM: libopenlibm
+  LLVM: libLLVM-15.0.7 (ORCJIT, znver3)
+Threads: 1 default, 0 interactive, 1 GC (on 24 virtual cores)
+
+
+ 
+Model 	 Grid type 	 Grid size 	 MinTime 	 MedianTime 	 MeanTime 	 MaxTime 	 Memory 	 Allocs 	 Num Samples
+Hydrostatic	RectilinearGrid	(32, 32)	671385.0	689298.5	752903.2	1.310013e6	1095408	3084	10
+Hydrostatic	RectilinearGrid	(64, 64)	955220.0	977254.5	1.019648e6	1.451581e6	1095408	3084	10
+Hydrostatic	RectilinearGrid	(128, 128)	2.040064e6	2.055464e6	2.1695916e6	3.143416e6	1095408	3084	10
+Hydrostatic	RectilinearGrid	(256, 256)	6.286344e6	6.348294e6	6.576053e6	8.676523e6	1095408	3084	10
+Hydrostatic	RectilinearGrid	(512, 512)	3.107581e7	3.27334585e7	3.42398788e7	4.1748397e7	1096800	3171	10
