@@ -30,10 +30,26 @@ function writeTrial(B)
 end
 
 
-m = "Hydrostatic"#"Nonhydrostatic" #Alternatives: "Hydrostatic" "ShallowWater"
-
 #main code 
 completedBenchmarks = []
+m = "Hydrostatic"
+
+while (true)
+        println("Please enter the type of model you would like to benchmark. (H-hydrostaic, S-shallow water, N-nonhydrostatic)")
+        input = readline()
+        if (input == "H")
+                m = "Hydrostatic"
+                break
+        elseif (input == "N")
+                m = "Nonhydrostatic"
+                break
+        elseif (input == "S")
+                m = "ShallowWater"
+                break
+        else
+                println("Try again.")
+        end
+end
 
 for g in gridSizes
         println("Starting Case ", string(g))
