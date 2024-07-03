@@ -16,13 +16,8 @@ function cpu_usage_track(fileName)
                         irq = parse(Int64, item[8])
                         softirq = parse(Int64, item[9])
                         total = user + nice + system + idle + iowait + irq + softirq
-                        #println(user, " ", nice," ", system," ", idle," ", iowait," ",irq," ",softirq, ".")
-                        #println("User   Nice    System  Idle    Iowait  Irq     Softirq")
-                        #println(100*user/total, " ", 100*nice/total," ", 100*system/total," ", 100*idle/total," ", 100*iowait/total," ",100*irq/total," ",100*softirq/total, ".")
-                        #println(total)
                         outputStr = string(100 * user / total) * "\t" * string(100 * nice / total) * "\t" * string(100 * system / total) * "\t" * string(100 * idle / total) * "\t" * string(100 * iowait / total) * "\t" * string(100 * irq / total) * "\t" * string(100 * softirq / total)
 
-                        #println(outputStr)
                         open(fileName, "a") do file
                                 write(file, outputStr)
                         end
